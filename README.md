@@ -1,6 +1,6 @@
 # Twine Protocol
 
-Twine Protocol is a simple way to exchange payloads between two running processes.
+Twine Protocol is a developer-friendly way of getting two running processes to have non-trivial message and payload exchanges.
 
 See the [wiki](https://github.com/teleclimber/twine-protocol/wiki/The-Twine-Protocol) where I dump some thoughts and current info.
 
@@ -15,7 +15,7 @@ The implementations can work using different transports:
 
 - A front end and a back end
 - A sandboxed process and its host
-- ...
+- Along running job and its host
 
 ## Why?
 
@@ -24,7 +24,7 @@ I wanted a simple way to communicate between two processes without reinventing a
 - Simple and effective. Lightweight.
 - Reasonably performant. Small messages. Minimal handshake.
 - Quick to adopt: no code-gen. Just import and use.
-- Reusable in different environments (transports) to I don't have to learn a new thing.
+- Reusable in different environments (transports). Use the same APIs and patterns, no need to learn something new.
 - Payload-agnostic. Send JSON, strings, binary data, or just a single byte.
 - Bidirectional. Either side can send.
 - Powerful enough to support non-trivial exchange of information that might occur between two running functions.
